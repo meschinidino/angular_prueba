@@ -11,6 +11,7 @@ import { SearchComponent } from './pages/search/search.component';
 import { SettingsComponent } from './pages/settings/settings.component';
 import { NavigationComponent } from './navigation/navigation.component';
 import {BookComponent} from "./book/book.component";
+import { LoanViewComponent } from './pages/loan-view/loan-view.component';
 
 @NgModule({
   declarations: [
@@ -18,7 +19,8 @@ import {BookComponent} from "./book/book.component";
     RatingsComponent,
     HomeComponent,
     SearchComponent,
-    SettingsComponent
+    SettingsComponent,
+    LoanViewComponent
   ],
   imports: [
     BrowserModule,

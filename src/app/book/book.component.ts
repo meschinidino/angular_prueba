@@ -1,5 +1,6 @@
 import { Component, Input, HostListener } from '@angular/core';
 import { CommonModule } from '@angular/common';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-book',
@@ -13,13 +14,15 @@ export class BookComponent {
   isFlipped = false;
   showFullDescription = false;
 
+  constructor(private router: Router) { }
+
   onBookClick() {
     this.isFlipped = !this.isFlipped;
   }
 
   onBorrowClick(event: Event) {
     event.stopPropagation();
-    // Handle borrow logic here if needed
+    this.router.navigate(['/loan-view'], { state: { book: this.book } });
   }
 
   @HostListener('document:click', ['$event'])
